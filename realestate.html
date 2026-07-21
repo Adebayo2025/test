@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuxEstate | Architectural Permanence in Nigeria</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fcf9f8",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#745c00",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-surface": "#303030",
+                    "primary-container": "#081c3a",
+                    "primary-fixed-dim": "#b5c7ed",
+                    "on-tertiary-container": "#008dc9",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f0eded",
+                    "surface-container-high": "#eae7e7",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e5e2e1",
+                    "background": "#fcf9f8",
+                    "secondary-fixed": "#ffe088",
+                    "secondary": "#735c00",
+                    "on-background": "#1b1c1c",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#071b39",
+                    "outline-variant": "#c5c6ce",
+                    "primary": "#000208",
+                    "on-primary-container": "#7485a8",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-surface-variant": "#44474e",
+                    "secondary-container": "#fed65b",
+                    "primary-fixed": "#d7e2ff",
+                    "on-surface": "#1b1c1c",
+                    "surface-bright": "#fcf9f8",
+                    "surface-tint": "#4e5f80",
+                    "tertiary-container": "#001f30",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#dcd9d9",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#c9e6ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#b5c7ed",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#000205",
+                    "on-primary-fixed-variant": "#364767",
+                    "outline": "#75777e",
+                    "on-tertiary-fixed": "#001e2f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<nav class="flex justify-between items-center px-6 md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">LuxEstate</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary border-b-2 border-secondary-fixed font-bold pb-1 font-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Buy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Rent</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Sell</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Agents</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">About</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="hidden lg:block text-on-surface-variant hover:text-primary transition-all font-label-md">Contact</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:scale-105 transition-transform duration-300">List Property</button>
+<button class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 z-0 parallax-bg" data-alt="A cinematic, wide-angle shot of a stunning modern architectural villa in Lagos, Nigeria. The structure features expansive floor-to-ceiling glass walls reflecting a warm golden sunset. The surrounding landscape is lush with tropical greenery and a sleek infinity pool. The aesthetic is high-end luxury, with soft warm lighting and a sophisticated palette of deep navy and crisp white." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9Ok8Z1N2wwJcISZwFjWxlePd84XMZCxG7HFNMKEFj2zfye9gKpJdtgIcYJGX2KHNmUI6C6ZLh5a_c9zFr8Di7a6fwOvpwfjsVBs0RgEYOtSJ8A3SgEiz0rt0ity5VC2eie54ukBnbGv8sPYKbZ9mgnjr4T_QxQoTe-75-WznrhPew4_SK-Ao9CYo09POiI5iDlNECgrUqRNrs6un5Ze_Db45qdjrbydIoOb40HON38T3ADFtzUiNakA')">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-6 md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<h1 class="text-on-primary font-display-lg-mobile md:text-display-lg leading-tight mb-6 animate-float">
+                        Find Your Dream <br/>Home Today
+                    </h1>
+<p class="text-on-primary/80 font-body-lg mb-10 max-w-xl">
+                        Experience the pinnacle of Nigerian luxury real estate. Buy, rent or invest in exclusively verified properties across the nation's most prestigious districts.
+                    </p>
+<!-- Search Overlay Box -->
+<div class="bg-surface p-6 md:p-8 rounded-xl shadow-2xl max-w-4xl border border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+<div class="space-y-1">
+<label class="text-[10px] uppercase font-bold text-outline tracking-wider">Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-outline text-lg">location_on</span>
+<input class="w-full pl-6 border-0 border-b border-outline-variant focus:ring-0 focus:border-primary bg-transparent text-sm font-semibold py-2" placeholder="Lekki, Lagos" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase font-bold text-outline tracking-wider">Property Type</label>
+<select class="w-full border-0 border-b border-outline-variant focus:ring-0 focus:border-primary bg-transparent text-sm font-semibold py-2">
+<option>Penthouse</option>
+<option>Duplex</option>
+<option>Villa</option>
+<option>Apartment</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase font-bold text-outline tracking-wider">Price Range</label>
+<select class="w-full border-0 border-b border-outline-variant focus:ring-0 focus:border-primary bg-transparent text-sm font-semibold py-2">
+<option>₦50M - ₦150M</option>
+<option>₦150M - ₦500M</option>
+<option>₦500M+</option>
+</select>
+</div>
+<button class="bg-primary text-on-primary rounded-lg h-full flex items-center justify-center gap-2 hover:bg-primary/90 transition-all py-3 md:py-0">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-md">Search</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-3 items-center">
+<span class="text-xs font-bold text-on-surface-variant">Trending:</span>
+<div class="flex gap-2">
+<a class="px-3 py-1 bg-surface-container text-xs rounded-full hover:bg-secondary-container transition-colors" href="#">Lekki</a>
+<a class="px-3 py-1 bg-surface-container text-xs rounded-full hover:bg-secondary-container transition-colors" href="#">Ikoyi</a>
+<a class="px-3 py-1 bg-surface-container text-xs rounded-full hover:bg-secondary-container transition-colors" href="#">Abuja</a>
+<a class="px-3 py-1 bg-surface-container text-xs rounded-full hover:bg-secondary-container transition-colors" href="#">VI</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-primary py-16">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="space-y-2">
+<div class="text-on-primary font-headline-lg" data-count="12500">12,500+</div>
+<div class="text-on-primary-container font-label-md uppercase tracking-widest">Properties</div>
+</div>
+<div class="space-y-2">
+<div class="text-on-primary font-headline-lg" data-count="5000">5,000+</div>
+<div class="text-on-primary-container font-label-md uppercase tracking-widest">Happy Clients</div>
+</div>
+<div class="space-y-2">
+<div class="text-on-primary font-headline-lg" data-count="700">700+</div>
+<div class="text-on-primary-container font-label-md uppercase tracking-widest">Verified Agents</div>
+</div>
+<div class="space-y-2">
+<div class="text-on-primary font-headline-lg" data-count="99">99%</div>
+<div class="text-on-primary-container font-label-md uppercase tracking-widest">Satisfaction</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Listings -->
+<section class="py-section-gap">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-2">
+<span class="text-secondary font-bold uppercase tracking-widest text-xs">Exclusives</span>
+<h2 class="font-headline-lg text-primary">Featured Listings</h2>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all group" href="#">
+                        View All Properties <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Property Card -->
+<template id="property-card">
+<div class="group bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/30 scale-100 hover:scale-102">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious high-end real estate photograph of a modern residential property. The interior or exterior should exhibit clean lines, premium materials like marble and hardwood, and professional staging. The lighting should be soft and airy, typical of a high-end architectural magazine, focusing on a minimalist and exclusive aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCr8bCUnnalvTdBDJr5cwYUMJcphWyX7Y9MrjEb8XKULyRUmCTQnLLiwvvDZ1MbxhB8zpVVIdpsUVxEQXr3qwZbZDxVPq4dah8z9MHEmBkTvXwYEwY5RQL2BUIjPt8-2mJCp7utclVK8BbOhABFqNhnZTxSEVzN8yGQtNoZDMMQKythM0tKpp9GtX2n81_wiBLN1tslIF5QqdtF8w_LT_Mv5xID1qc70dsPKwFF-Mag79VRg3eJNZp7Lg')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary/90 text-on-primary text-[10px] px-3 py-1 rounded-full uppercase font-bold backdrop-blur-md">For Sale</span>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-3 py-1 rounded-full uppercase font-bold backdrop-blur-md">Featured</span>
+</div>
+<button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-error transition-all">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="text-primary font-bold text-xl mb-1">₦450,000,000</div>
+<div class="text-on-surface-variant text-sm mb-4">5BR Luxury Mansion, Banana Island</div>
+<div class="flex justify-between items-center py-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">bed</span>
+<span class="text-xs font-bold">5 Beds</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">bathtub</span>
+<span class="text-xs font-bold">6 Baths</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">square_foot</span>
+<span class="text-xs font-bold">850 SQM</span>
+</div>
+</div>
+</div>
+</div>
+</template>
+<div class="contents" id="property-grid">
+<!-- Dynamic population here -->
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="bg-surface-container-low py-section-gap relative overflow-hidden">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-secondary font-bold uppercase tracking-widest text-xs">The LuxEstate Edge</span>
+<h2 class="font-headline-lg text-primary mt-2">Why Choose Us</h2>
+<p class="text-on-surface-variant mt-4">We redefine the real estate experience through rigorous verification and premium service.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/10 hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary-fixed text-3xl">verified_user</span>
+</div>
+<h3 class="font-headline-md text-primary mb-4">Verified Listings</h3>
+<p class="text-on-surface-variant leading-relaxed">Every property undergoes a 12-point physical and legal verification process before being listed on our platform.</p>
+</div>
+<div class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/10 hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary-fixed text-3xl">support_agent</span>
+</div>
+<h3 class="font-headline-md text-primary mb-4">24/7 Concierge</h3>
+<p class="text-on-surface-variant leading-relaxed">Dedicated portfolio managers available around the clock to handle viewings, negotiations, and legal documentation.</p>
+</div>
+<div class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/10 hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary-fixed text-3xl">payments</span>
+</div>
+<h3 class="font-headline-md text-primary mb-4">Best Market Deals</h3>
+<p class="text-on-surface-variant leading-relaxed">Our direct relationships with top developers ensure you get preferential pricing and exclusive payment plans.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Explore By City -->
+<section class="py-section-gap">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-primary">Explore Prestigious Cities</h2>
+<p class="text-on-surface-variant">Discover properties in Nigeria's prime investment hubs.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-[600px]">
+<div class="md:col-span-2 relative rounded-2xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A spectacular aerial night view of the Lagos city skyline, focusing on the glittering lights of Lekki and Victoria Island. The scene captures the energy and modernization of West Africa's leading commercial hub with glowing street lights and high-rise silhouettes against a deep indigo sky. The atmosphere is wealthy and aspirational." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3Io4BQl75jMA99tQeen31pfzEXzTg8DoKovLFqAtAO-KnlNQ9oz-B-YQHJr_6dGIVznGGXp9mfMQOM5O_B3u1RnlxtpeFB9gqwB9cqOOJ0V4NK_SpOq_xhlp58Nx_0K8Uu_iDCiAyOsJ8tjXcbx-ceDwUBXRljdKCYbeZc1NW-GNmiUZaLcO8a1mpXcQ2Ht8SvKj66TQbC3aXoiOYmREEw4qeReD0fpo02x5doESoBos5P0jFRxg7fg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-on-primary font-headline-md">Lagos</h3>
+<p class="text-on-primary/70 text-sm">8,420 Listings</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="The grand and organized cityscape of Abuja, Nigeria, showing its unique granite monoliths and modern government buildings in the Central Business District. The lighting is crisp morning sun, highlighting the clean boulevards and premium residential estates. The palette is dominated by neutral earth tones and vibrant green vegetation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMX6n6B8rAqq4Mclxp9KliVq_fgvKAYbMbjjrK3DXUQhUCl3WnyCJ1M4DZx09AB5MvjOTnA886xPRZkzwNJDS3fKzJqsGdBwbxOAMC9LBsc62ApZNhzGvTqrH50KELcUATjtJb4Rvck37GTxUeIVxK5TqieCsbOTkU46Mcd0S4LRPp-ULLs0gJxAhVAyISgqIQ42xgprw4CASWLxH-fshcdeBXjlA4TlD6hwQ8UeeImgDFPy_B9NMcTg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-on-primary font-headline-md">Abuja</h3>
+<p class="text-on-primary/70 text-sm">3,150 Listings</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A coastal overview of Port Harcourt, showing modern riverside properties and industrial expansion. The golden hour lighting casts long shadows over well-manicured residential gardens and the busy port area in the distance. The mood is industrious yet sophisticated, reflecting the city's economic importance." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIk7ygJilversJejzAsPmJA3J6CK70CCYbXIKJvmVCf8kowa-1uLHeDx83DkjP8osL-qb3z3FnMm9QpIdvdJZLWkhNOd4-kQ9XSnEFhu9PFjZl88JoncY6CzVvVdsZuWgk2KDg4P1_IvtnwVTbANKd__7KfN2JT4GPT09JzUQ42UJYY9XI6kM0cS8qb8nUSiKY0-3EvL67s-Vb2OV1H4vTeAEEzU_yEIVZcvEZuGS4K1uWoxUUAkqYRA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-on-primary font-headline-md">Port Harcourt</h3>
+<p class="text-on-primary/70 text-sm">1,280 Listings</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-primary text-on-primary py-section-gap overflow-hidden">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col lg:flex-row gap-20 items-center">
+<div class="lg:w-1/3">
+<h2 class="font-headline-lg mb-6">Trusted by Discerning Investors</h2>
+<p class="text-on-primary-container mb-10">We have helped thousands of families and corporate investors find their perfect anchor in the Nigerian market.</p>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-primary-container p-8 rounded-2xl border border-white/10">
+<div class="flex text-secondary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-primary/90 italic mb-6">"LuxEstate provided a seamless experience from search to handover. Their verification gave us the confidence to invest remotely."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover" data-alt="A professional headshot of a successful Nigerian business executive in a tailored suit. He is smiling warmly with a background of a modern glass-walled office. The lighting is bright and high-key, conveying professional trust and achievement in a contemporary corporate setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbQNlWFAVoBz0hITtNTVay3rrImFy99qRt1fNGTwNfMrZYTqlXMwA-ZeaHIsEpyIpfVwC8xhH4yqI4RcW21i9c4OV_rUt2ztUP3BYGMhC_5iouvqt2JUdYqYaPylWJa3nNaU8MIbsfvt2_XRWkkP-Q2T07OZ3lOCgTwxPLERqG4lrz8yEVPVBmbQSZJxWZDvj3XsUK-Um_eWRdDf-yHEJrrEEJFLitpRsue8qzeNMkW7PCTx5lnyLIGg')"></div>
+<div>
+<div class="font-bold">Oluwatoyin Adeyemi</div>
+<div class="text-xs text-on-primary-container">Tech Entrepreneur</div>
+</div>
+</div>
+</div>
+<div class="bg-primary-container p-8 rounded-2xl border border-white/10">
+<div class="flex text-secondary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-primary/90 italic mb-6">"The best inventory of off-plan properties in Abuja. Their team's local knowledge saved us millions in negotiation."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-cover" data-alt="A portrait of a sophisticated Nigerian woman in modern business attire, looking confident and approachable. The setting is a minimalist luxury home interior with soft natural light coming through a window. The aesthetic is clean, professional, and elegant, reflecting high-class urban living." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDatnXx5n3gDBwg3CNjLMiKBIRybpMaoy1oz4r1ltu5Cs-X01qZSywcAy-Dn4K0Cmty8QJfRJxtCS9D8N0H0tZ3gKon47vMcnwLl3Sa8Px89pDRPDoSlG7NyXjtWd57DHNx4n39QDaJZGmtsX9IKsnq-mv4g674LGFM66dqPzg89YrMxM5lCUD8CGZ_t3uZdLNWtJdXlOCt7EfPatXPAyZLh8ql_2rjy1x70X9jXqM7EYMrdiwSoFtkbA')"></div>
+<div>
+<div class="font-bold">Fatima Yusuf</div>
+<div class="text-xs text-on-primary-container">Investor</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 flex flex-wrap justify-between items-center opacity-40 grayscale hover:grayscale-0 transition-all gap-8">
+<span class="text-xl font-bold italic">GTBank</span>
+<span class="text-xl font-bold italic">Julius Berger</span>
+<span class="text-xl font-bold italic">Access Bank</span>
+<span class="text-xl font-bold italic">Lafarge Holcim</span>
+<span class="text-xl font-bold italic">Zenith Bank</span>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-section-gap px-6">
+<div class="max-w-container-max mx-auto bg-primary rounded-3xl p-12 md:p-24 relative overflow-hidden text-center">
+
+<div class="relative z-10">
+<h2 class="text-on-primary font-display-lg-mobile md:text-display-lg mb-8">Ready to Find Your <br/>Dream Home?</h2>
+<p class="text-on-primary/80 font-body-lg mb-12 max-w-xl mx-auto">Join thousands of satisfied owners. Schedule a private consultation with our property advisors today.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all">Book Consultation</button>
+<button class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition-all">Contact Sales</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-highest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-extrabold text-primary mb-6">LuxEstate</div>
+<p class="text-on-surface-variant font-body-md mb-8">Defining Architectural Permanence in the Nigerian Luxury Market since 2012.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-6">Company</h4>
+<ul class="space-y-4 text-on-surface-variant">
+<li><a class="hover:text-secondary-fixed font-bold transition-all" href="#">About Us</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Our Agents</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Careers</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Press &amp; Media</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-6">Services</h4>
+<ul class="space-y-4 text-on-surface-variant">
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Property Sales</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Rentals</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Investment Advisory</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Legal Consulting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-6">Newsletter</h4>
+<p class="text-on-surface-variant text-sm mb-6">Get exclusive early access to new developments.</p>
+<form class="space-y-4">
+<input class="w-full bg-surface-container border border-outline-variant px-4 py-3 rounded-lg focus:ring-primary focus:border-primary" placeholder="Your email address" type="email"/>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-bold hover:opacity-100 transition-all">Subscribe Now</button>
+</form>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop mt-20 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant text-sm">
+<div>© 2024 LuxEstate. Defining Architectural Permanence.</div>
+<div class="flex gap-8">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+<script>
+        // Populate Featured Listings
+        const grid = document.getElementById('property-grid');
+        const template = document.getElementById('property-card');
+        const properties = [
+            { price: '₦450,000,000', title: '5BR Luxury Mansion', loc: 'Banana Island, Lagos', beds: 5, baths: 6, sqm: 850 },
+            { price: '₦120,000,000', title: 'Modern 3BR Apartment', loc: 'Maitama, Abuja', beds: 3, baths: 4, sqm: 240 },
+            { price: '₦350,000,000', title: 'Penthouse Suite', loc: 'Victoria Island, Lagos', beds: 4, baths: 5, sqm: 520 },
+            { price: '₦85,000,000', title: 'Terrace Duplex', loc: 'Lekki Phase 1, Lagos', beds: 4, baths: 4, sqm: 310 },
+            { price: '₦550,000,000', title: 'Smart Waterfront Villa', loc: 'Eko Atlantic, Lagos', beds: 6, baths: 7, sqm: 1100 },
+            { price: '₦210,000,000', title: 'Executive Townhouse', loc: 'Wuse 2, Abuja', beds: 5, baths: 5, sqm: 450 },
+            { price: '₦180,000,000', title: 'Luxury Condominium', loc: 'Old Ikoyi, Lagos', beds: 3, baths: 3, sqm: 280 },
+            { price: '₦95,000,000', title: 'Modern Semi-Detached', loc: 'GRA, Port Harcourt', beds: 4, baths: 5, sqm: 380 }
+        ];
+
+        properties.forEach(prop => {
+            const clone = template.content.cloneNode(true);
+            const container = clone.querySelector('div');
+            container.querySelector('.text-primary').textContent = prop.price;
+            container.querySelector('.text-on-surface-variant.text-sm').textContent = prop.title + ', ' + prop.loc;
+            const spans = container.querySelectorAll('.text-xs.font-bold');
+            spans[0].textContent = prop.beds + ' Beds';
+            spans[1].textContent = prop.baths + ' Baths';
+            spans[2].textContent = prop.sqm + ' SQM';
+            grid.appendChild(clone);
+        });
+
+        // Simple Counter Animation
+        const counters = document.querySelectorAll('[data-count]');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-count'));
+                    let current = 0;
+                    const increment = target / 50;
+                    const interval = setInterval(() => {
+                        current += increment;
+                        if(current >= target) {
+                            entry.target.textContent = target.toLocaleString() + (target === 99 ? '%' : '+');
+                            clearInterval(interval);
+                        } else {
+                            entry.target.textContent = Math.floor(current).toLocaleString() + '+';
+                        }
+                    }, 30);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        counters.forEach(c => observer.observe(c));
+    </script>
+</body></html>
