@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sell Your Property | LuxEstate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .step-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hide-step {
+            display: none;
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        .show-step {
+            display: block;
+            opacity: 1;
+            transform: translateX(0);
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #000208 !important;
+            box-shadow: 0 0 0 2px rgba(116, 133, 168, 0.2);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed-dim": "#89ceff",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#745c00",
+                        "on-tertiary-fixed-variant": "#004c6e",
+                        "on-secondary-fixed": "#241a00",
+                        "inverse-surface": "#303030",
+                        "primary-container": "#081c3a",
+                        "primary-fixed-dim": "#b5c7ed",
+                        "on-tertiary-container": "#008dc9",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f0eded",
+                        "surface-container-high": "#eae7e7",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e5e2e1",
+                        "background": "#fcf9f8",
+                        "secondary-fixed": "#ffe088",
+                        "secondary": "#735c00",
+                        "on-background": "#1b1c1c",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#071b39",
+                        "outline-variant": "#c5c6ce",
+                        "primary": "#000208",
+                        "on-primary-container": "#7485a8",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface-variant": "#44474e",
+                        "secondary-container": "#fed65b",
+                        "primary-fixed": "#d7e2ff",
+                        "on-surface": "#1b1c1c",
+                        "surface-bright": "#fcf9f8",
+                        "surface-tint": "#4e5f80",
+                        "tertiary-container": "#001f30",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#574500",
+                        "tertiary-fixed": "#c9e6ff",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b5c7ed",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#000205",
+                        "on-primary-fixed-variant": "#364767",
+                        "outline": "#75777e",
+                        "on-tertiary-fixed": "#001e2f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">LuxEstate</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Buy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Rent</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-secondary-fixed font-bold pb-1" href="#">Sell</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Agents</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">About</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="hidden lg:block font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors">Contact</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:scale-105 transition-transform duration-300">List Property</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container font-label-md text-[12px] uppercase tracking-wider rounded-full mb-6">Premium Real Estate Services</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">List Your Property <br/><span class="text-on-primary-container">with the Best</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">Unlock the true value of your architectural masterpiece. Our exclusive network connects your property with high-net-worth investors across Lagos, Abuja, and beyond.</p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md shadow-lg hover:shadow-xl transition-all" href="#listing-form">Start Listing Now</a>
+<a class="border border-outline text-primary px-10 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all" href="#why-us">Learn More</a>
+</div>
+</div>
+<div class="relative h-[500px] md:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl scale-102">
+<div class="absolute inset-0 z-0" data-alt="An ultra-modern luxury villa in Lagos, Nigeria, showcasing a minimalist architectural style with massive glass windows, clean white concrete lines, and a pristine infinity pool reflecting a warm, golden sunset sky. The atmosphere is quiet luxury, emphasizing trust and high-end permanence with lush tropical landscaping and professional photography lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPQ6bapVsS9dOD62EorimdwoTSkKuv2SNngpuOdEda994YzWjA3aQtjPA9-1njGoOJWTlvq7rsgAsrcRwIozslcwnHI3_VRlzcm-QutkcprZhiHIn5_jWOeRP5idkA4ZE8VxxSgUXFKGOwmYlVZ9Tz-esdjjIV9PfVC7DqZ9jfoHtZ20udhFRRDUEx6l4m9nEjxqgWjT7fReSdGA0kAP-aK3rwvrH7b6PUWZ3Nk3i97Ct-fU5Vle3rww')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 glass-effect bg-white/10 p-6 rounded-xl border border-white/20">
+<p class="text-white font-headline-md text-headline-md mb-2">Sold: The Sapphire Penthouse</p>
+<p class="text-white/80 font-body-md text-body-md">Successfully closed at $4.2M within 14 days of listing.</p>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed/30 blur-[120px] rounded-full"></div>
+</header>
+<!-- Why List With Us -->
+<section class="py-section-gap bg-surface-container-low" id="why-us">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">The LuxEstate Advantage</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<!-- Global Reach -->
+<div class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/30 hover:scale-105 transition-transform duration-300">
+<div class="w-16 h-16 bg-primary-fixed rounded-xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Global Reach</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Your property is showcased to a curated list of international investors and local high-net-worth individuals, ensuring maximum competitive bids.</p>
+</div>
+<!-- Verified Trust -->
+<div class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/30 hover:scale-105 transition-transform duration-300">
+<div class="w-16 h-16 bg-secondary-fixed rounded-xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-secondary-fixed text-3xl">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Verified Trust</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We prioritize architectural permanence and security. Every buyer is pre-qualified to respect your privacy and ensure seamless transaction integrity.</p>
+</div>
+<!-- Expert Marketing -->
+<div class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/30 hover:scale-105 transition-transform duration-300">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-3xl">camera_outdoor</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Expert Marketing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">From 8K drone cinematography to bespoke 3D virtual tours, our marketing suites are designed to capture the soul of your property's design.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Multi-step Submission Form -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface" id="listing-form">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Submit Your Property</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Follow our refined process to get your property listed among the elite.</p>
+</div>
+<!-- Form Container -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+<!-- Progress Stepper -->
+<div class="flex justify-between mb-12 relative">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant -translate-y-1/2 z-0"></div>
+<div class="absolute top-1/2 left-0 w-0 h-0.5 bg-primary -translate-y-1/2 z-0 transition-all duration-500" id="progress-bar"></div>
+<div class="step-indicator relative z-10 w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold" data-step="1">1</div>
+<div class="step-indicator relative z-10 w-10 h-10 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold" data-step="2">2</div>
+<div class="step-indicator relative z-10 w-10 h-10 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold" data-step="3">3</div>
+<div class="step-indicator relative z-10 w-10 h-10 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold" data-step="4">4</div>
+</div>
+<form class="space-y-8" id="multiStepForm">
+<!-- Step 1: Owner Info -->
+<div class="form-step show-step" id="step-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Owner Information</h3>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="flex flex-col">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Full Name</label>
+<input class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md" placeholder="e.g. Olumide Adenuga" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Email Address</label>
+<input class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md" placeholder="olumide@example.com" type="email"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Phone Number</label>
+<input class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md" placeholder="+234 ..." type="tel"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Preferred Contact Method</label>
+<select class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md">
+<option>Email</option>
+<option>Phone Call</option>
+<option>WhatsApp</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Step 2: Property Details -->
+<div class="form-step hide-step" id="step-2">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Property Details</h3>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="flex flex-col md:col-span-2">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Property Title</label>
+<input class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md" placeholder="e.g. Modernist Waterfront Estate in Banana Island" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Property Type</label>
+<select class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md">
+<option>Penthouse</option>
+<option>Villa</option>
+<option>Terrace House</option>
+<option>Commercial Space</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Asking Price (USD Equivalent)</label>
+<input class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md" placeholder="e.g. 1,500,000" type="text"/>
+</div>
+<div class="flex flex-col md:col-span-2">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Location</label>
+<input class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md" placeholder="Street Name, Area, City" type="text"/>
+</div>
+</div>
+</div>
+<!-- Step 3: Amenities & Features -->
+<div class="form-step hide-step" id="step-3">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Amenities & Features</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+<label class="flex items-center gap-3 p-4 bg-surface rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md">Swimming Pool</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md">Gym / Fitness Center</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md">Cinema Room</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md">Smart Home System</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md">Wine Cellar</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md">Security Guard Room</span>
+</label>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md mb-2 text-on-surface-variant">Additional Description</label>
+<textarea class="bg-surface border border-outline-variant rounded-lg p-4 font-body-md" placeholder="Describe the unique architectural highlights..." rows="4"></textarea>
+</div>
+</div>
+<!-- Step 4: Image Upload -->
+<div class="form-step hide-step" id="step-4">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Visual Assets</h3>
+<div class="border-2 border-dashed border-outline-variant rounded-2xl p-12 text-center bg-surface hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-6xl text-on-surface-variant mb-4 group-hover:scale-110 transition-transform">cloud_upload</span>
+<p class="font-headline-md text-headline-md text-primary mb-2">Drop high-res photos here</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Or click to browse from your device. Recommended: JPG/PNG, min 2500px wide.</p>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-md" type="button">Choose Files</button>
+</div>
+<div class="mt-8 grid grid-cols-4 gap-4">
+<div class="aspect-square bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center opacity-40">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center opacity-40">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center opacity-40">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-lg border border-outline-variant flex items-center justify-center opacity-40">
+<span class="material-symbols-outlined">image</span>
+</div>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex justify-between pt-8 border-t border-outline-variant/30">
+<button class="px-8 py-3 font-label-md text-label-md border border-outline rounded-lg text-primary opacity-50 cursor-not-allowed transition-all" disabled="" id="prevBtn" type="button">Previous</button>
+<button class="px-10 py-3 font-label-md text-label-md bg-primary text-on-primary rounded-lg shadow-md hover:scale-105 transition-transform" id="nextBtn" type="button">Next Step</button>
+</div>
+</form>
+<!-- Success Message Placeholder -->
+<div class="hidden absolute inset-0 bg-surface flex flex-col items-center justify-center text-center p-12 z-50" id="success-message">
+<div class="w-24 h-24 bg-secondary-container rounded-full flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-secondary-container text-5xl">check_circle</span>
+</div>
+<h2 class="font-display-lg text-headline-lg text-primary mb-4">Submission Received</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Thank you for choosing LuxEstate. Our curators will review your property details and contact you within 24 hours to schedule a professional inspection.</p>
+<button class="mt-10 font-label-md text-label-md text-primary border-b-2 border-primary" onclick="window.location.reload()">Return to Home</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full py-section-gap border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<a class="font-headline-md text-headline-md font-extrabold text-primary mb-6 block" href="#">LuxEstate</a>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">The premier destination for luxury residential and commercial properties in West Africa's most prestigious districts.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary uppercase font-bold tracking-widest mb-2">Company</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Our Agents</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary uppercase font-bold tracking-widest mb-2">Services</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Buying</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Selling</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Investment Strategy</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary uppercase font-bold tracking-widest mb-2">Newsletter</h4>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80 mb-2">Subscribe for exclusive market insights.</p>
+<div class="flex">
+<input class="bg-surface border border-outline-variant p-3 rounded-l-lg w-full" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-4 rounded-r-lg">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 LuxEstate. Defining Architectural Permanence.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">face_nod</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">alternate_email</span>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const steps = document.querySelectorAll('.form-step');
+            const indicators = document.querySelectorAll('.step-indicator');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const progressBar = document.getElementById('progress-bar');
+            const successMsg = document.getElementById('success-message');
+            let currentStep = 0;
+
+            const updateStep = () => {
+                steps.forEach((step, index) => {
+                    if (index === currentStep) {
+                        step.classList.remove('hide-step');
+                        step.classList.add('show-step');
+                    } else {
+                        step.classList.add('hide-step');
+                        step.classList.remove('show-step');
+                    }
+                });
+
+                indicators.forEach((indicator, index) => {
+                    if (index <= currentStep) {
+                        indicator.classList.remove('bg-surface-container', 'border-outline-variant', 'text-on-surface-variant');
+                        indicator.classList.add('bg-primary', 'text-on-primary');
+                    } else {
+                        indicator.classList.add('bg-surface-container', 'border-outline-variant', 'text-on-surface-variant');
+                        indicator.classList.remove('bg-primary', 'text-on-primary');
+                    }
+                });
+
+                // Progress Bar
+                const progressWidth = (currentStep / (steps.length - 1)) * 100;
+                progressBar.style.width = `${progressWidth}%`;
+
+                // Buttons
+                if (currentStep === 0) {
+                    prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    prevBtn.disabled = true;
+                } else {
+                    prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    prevBtn.disabled = false;
+                }
+
+                if (currentStep === steps.length - 1) {
+                    nextBtn.textContent = 'Submit Property';
+                } else {
+                    nextBtn.textContent = 'Next Step';
+                }
+            };
+
+            nextBtn.addEventListener('click', () => {
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    updateStep();
+                } else {
+                    // Final Submit
+                    successMsg.classList.remove('hidden');
+                    successMsg.classList.add('flex');
+                    window.scrollTo({ top: document.getElementById('listing-form').offsetTop - 100, behavior: 'smooth' });
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentStep > 0) {
+                    currentStep--;
+                    updateStep();
+                }
+            });
+        });
+    </script>
+</body></html>
