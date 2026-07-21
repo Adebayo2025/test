@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact LuxEstate | Architectural Permanence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fcf9f8",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#745c00",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-surface": "#303030",
+                    "primary-container": "#081c3a",
+                    "primary-fixed-dim": "#b5c7ed",
+                    "on-tertiary-container": "#008dc9",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f0eded",
+                    "surface-container-high": "#eae7e7",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e5e2e1",
+                    "background": "#fcf9f8",
+                    "secondary-fixed": "#ffe088",
+                    "secondary": "#735c00",
+                    "on-background": "#1b1c1c",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#071b39",
+                    "outline-variant": "#c5c6ce",
+                    "primary": "#000208",
+                    "on-primary-container": "#7485a8",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-surface-variant": "#44474e",
+                    "secondary-container": "#fed65b",
+                    "primary-fixed": "#d7e2ff",
+                    "on-surface": "#1b1c1c",
+                    "surface-bright": "#fcf9f8",
+                    "surface-tint": "#4e5f80",
+                    "tertiary-container": "#001f30",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#dcd9d9",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#c9e6ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#b5c7ed",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#000205",
+                    "on-primary-fixed-variant": "#364767",
+                    "outline": "#75777e",
+                    "on-tertiary-fixed": "#001e2f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .luxury-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all-300 {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">LuxEstate</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Buy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Rent</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Sell</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Agents</a>
+<a class="text-primary border-b-2 border-secondary-fixed font-bold pb-1 font-label-md text-label-md" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block px-6 py-2 border border-secondary text-secondary font-label-md text-label-md hover:bg-secondary hover:text-white transition-all-300">Contact</button>
+<button class="px-6 py-2 bg-primary text-on-primary font-label-md text-label-md scale-102 transition-transform duration-300 hover:opacity-90">List Property</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto py-16 md:py-24 text-center">
+<h1 class="font-display-lg text-display-lg mb-6 tracking-tight">Connect With Excellence</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Whether you are acquiring a legacy estate or listing a premium development, our specialized consultants are ready to facilitate your vision.
+            </p>
+</section>
+<!-- Split Screen Contact & Info -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Contact Form Side -->
+<div class="bg-white p-8 md:p-12 luxury-shadow border border-outline-variant/20 rounded-lg">
+<h2 class="font-headline-lg text-headline-lg mb-8 text-primary">Inquiry Form</h2>
+<form class="space-y-6" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant p-4 focus:outline-none focus:ring-2 focus:ring-primary-fixed-dim focus:border-primary transition-all-300" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-low border border-outline-variant p-4 focus:outline-none focus:ring-2 focus:ring-primary-fixed-dim focus:border-primary transition-all-300" placeholder="john@luxestate.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Phone Number</label>
+<input class="w-full bg-surface-container-low border border-outline-variant p-4 focus:outline-none focus:ring-2 focus:ring-primary-fixed-dim focus:border-primary transition-all-300" placeholder="+234 (0) 800 000 0000" type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Message</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant p-4 focus:outline-none focus:ring-2 focus:ring-primary-fixed-dim focus:border-primary transition-all-300" placeholder="How can our architectural consultants assist you?" rows="5"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-headline-md text-headline-md hover:bg-primary/90 transition-all-300 uppercase tracking-widest" type="submit">
+                            Send Message
+                        </button>
+</form>
+</div>
+<!-- Info Side -->
+<div class="space-y-12 lg:pl-12">
+<div>
+<h3 class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-4">Our Flagship Office</h3>
+<p class="font-headline-md text-headline-md mb-2">Lagos Headquarters</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            12A Alexander Avenue, Ikoyi<br/>
+                            Lagos, Nigeria 101233
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-4">Direct Lines</h3>
+<div class="space-y-2">
+<p class="font-body-md text-body-md flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+                                    +234 1 234 5678
+                                </p>
+<p class="font-body-md text-body-md flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+                                    concierge@luxestate.ng
+                                </p>
+</div>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-4">Business Hours</h3>
+<div class="space-y-2">
+<p class="font-body-md text-body-md">Mon — Fri: 8:00 AM - 6:00 PM</p>
+<p class="font-body-md text-body-md">Sat: 10:00 AM - 4:00 PM</p>
+<p class="font-body-md text-body-md text-on-surface-variant/60">Sun: By Appointment Only</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30">
+<div class="flex gap-6">
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-primary hover:bg-secondary-container transition-all-300" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-primary hover:bg-secondary-container transition-all-300" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-primary hover:bg-secondary-container transition-all-300" href="#">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-[600px] relative overflow-hidden bg-surface-container-highest">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="A high-resolution, sophisticated digital map representation of Ikoyi, Lagos, styled with a silver and navy blue professional palette. The map shows elegant architectural silhouettes and minimalist street layouts with a prominent gold pin marking a flagship office location. The lighting is soft and atmospheric, highlighting the prestige of the urban Nigerian landscape in a clean, modern tech-luxury aesthetic." data-location="Lagos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSdw3qjSFMk3QdcVM1WfNvDdj1JNXzIMtr_YYnBgkUPvhdrTQQ_xFzkhKtqTwL_6AgRGvp9sH5YqgPrOI7K5OrbZP6PfeBT5hwCtNFFD-FiSZiV-P8iBpOjsTFxYXjDzbrqIC4F4ucE0bDR_gC1n0qGVCeCI0NLYsgMcY4aJzaNjAYe4fPJb-S13NgFK7065WRTPEY-0g8I6-WCnIHA3GL6WQMdeZt0gJbvocJYVX3Fr9wVUv36bZpCQ"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent z-10 pointer-events-none"></div>
+<!-- Map Overlay Card -->
+<div class="absolute bottom-12 left-margin-desktop z-20 hidden md:block">
+<div class="bg-white/90 backdrop-blur-md p-8 luxury-shadow border border-outline-variant max-w-sm">
+<h4 class="font-headline-md text-headline-md mb-2">Visit Our Studio</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Our flagship experience center in Ikoyi offers an immersive look at our current and future architectural developments.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md font-bold hover:gap-4 transition-all-300" href="#">
+                        GET DIRECTIONS <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="bg-primary py-section-gap text-on-primary text-center px-margin-desktop">
+<h2 class="font-display-lg text-display-lg mb-8">Stay Ahead of the Market</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-xl mx-auto mb-12">
+                Join our private newsletter for exclusive early access to off-market luxury listings and architectural insights.
+            </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center max-w-md mx-auto">
+<input class="flex-1 bg-white/10 border border-white/20 p-4 text-white focus:outline-none focus:bg-white/20 transition-all-300" placeholder="Your professional email" type="email"/>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 font-label-md text-label-md font-bold hover:bg-secondary-container transition-all-300">SUBSCRIBE</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-highest dark:bg-primary-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<a class="font-headline-md text-headline-md font-extrabold text-primary" href="#">LuxEstate</a>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Defining Architectural Permanence in the heart of Africa's most prestigious districts.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-primary font-bold">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Our Heritage</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Legal</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-primary font-bold">Services</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Residential Sales</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Commercial Leasing</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-container transition-all opacity-80 hover:opacity-100" href="#">Advisory</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-primary font-bold">Contact</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Lagos: +234 1 234 5678</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Abuja: +234 9 876 5432</p>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-outline-variant/30 text-center">
+<p class="font-label-md text-label-md text-on-surface-variant/60">© 2024 LuxEstate. Defining Architectural Permanence.</p>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-10 right-10 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all-300 group flex items-center gap-2" href="https://wa.me/234000000000" target="_blank">
+<span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 font-bold px-0 group-hover:px-2">WhatsApp Concierge</span>
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.516.893 3.004 1.347 4.797 1.347 5.176 0 9.389-4.213 9.391-9.389 0-2.508-.977-4.866-2.751-6.641-1.774-1.775-4.133-2.752-6.64-2.752-5.177 0-9.39 4.213-9.393 9.39 0 1.884.508 3.42 1.47 4.887l-.97 3.543 3.696-.969zm8.566-6.305c-.273-.137-1.617-.798-1.867-.889-.252-.09-.434-.136-.615.137-.182.273-.706.889-.865 1.07-.158.182-.317.204-.59.068-.272-.136-1.15-.424-2.19-1.353-.809-.722-1.355-1.615-1.514-1.888-.159-.272-.017-.42.12-.556.123-.122.272-.318.409-.477.136-.159.182-.272.272-.454.09-.181.045-.341-.023-.477-.068-.136-.615-1.48-.843-2.025-.221-.532-.444-.459-.615-.468-.159-.009-.341-.01-.523-.01s-.477.068-.727.341c-.25.272-.954.932-.954 2.273s.977 2.636 1.114 2.818c.136.182 1.921 2.933 4.653 4.111.65.28 1.157.447 1.554.573.652.207 1.246.178 1.715.109.522-.077 1.617-.66 1.844-1.297.227-.636.227-1.182.159-1.297-.069-.114-.251-.182-.524-.319z"></path>
+</svg>
+</a>
+<script>
+        // Form submission micro-interaction
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'SENDING...';
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+
+            setTimeout(() => {
+                btn.innerText = 'MESSAGE SENT';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-secondary');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.add('bg-primary');
+                    btn.classList.remove('bg-secondary');
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-50');
+                    e.target.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Simple scroll reveal for the luxury feel
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
