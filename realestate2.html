@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Details | LuxEstate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#fcf9f8",
+                      "tertiary-fixed-dim": "#89ceff",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-container": "#745c00",
+                      "on-tertiary-fixed-variant": "#004c6e",
+                      "on-secondary-fixed": "#241a00",
+                      "inverse-surface": "#303030",
+                      "primary-container": "#081c3a",
+                      "primary-fixed-dim": "#b5c7ed",
+                      "on-tertiary-container": "#008dc9",
+                      "error": "#ba1a1a",
+                      "surface-container": "#f0eded",
+                      "surface-container-high": "#eae7e7",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e5e2e1",
+                      "background": "#fcf9f8",
+                      "secondary-fixed": "#ffe088",
+                      "secondary": "#735c00",
+                      "on-background": "#1b1c1c",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#071b39",
+                      "outline-variant": "#c5c6ce",
+                      "primary": "#000208",
+                      "on-primary-container": "#7485a8",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-surface-variant": "#44474e",
+                      "secondary-container": "#fed65b",
+                      "primary-fixed": "#d7e2ff",
+                      "on-surface": "#1b1c1c",
+                      "surface-bright": "#fcf9f8",
+                      "surface-tint": "#4e5f80",
+                      "tertiary-container": "#001f30",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#dcd9d9",
+                      "secondary-fixed-dim": "#e9c349",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed-variant": "#574500",
+                      "tertiary-fixed": "#c9e6ff",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#b5c7ed",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#000205",
+                      "on-primary-fixed-variant": "#364767",
+                      "outline": "#75777e",
+                      "on-tertiary-fixed": "#001e2f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "section-gap": "120px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "margin-desktop": "48px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Manrope"],
+                      "display-lg-mobile": ["Manrope"],
+                      "headline-lg": ["Manrope"],
+                      "display-lg": ["Manrope"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Manrope"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">LuxEstate</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-secondary-fixed font-bold pb-1 transition-colors duration-300" href="#">Buy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Rent</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Sell</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Agents</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-label-md text-label-md px-6 py-2 border border-primary text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 rounded-lg">Contact</button>
+<button class="font-label-md text-label-md px-6 py-2 bg-primary text-on-primary hover:bg-primary-container transition-all duration-300 rounded-lg">List Property</button>
+</div>
+</div>
+</nav>
+<main class="mt-24 pb-20">
+<!-- Breadcrumbs -->
+<div class="max-w-container-max mx-auto px-margin-desktop py-4">
+<nav class="flex gap-2 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary" href="#">Properties</a>
+<span>/</span>
+<a class="hover:text-primary" href="#">Lagos</a>
+<span>/</span>
+<span class="text-primary font-bold">The Obsidian Penthouse</span>
+</nav>
+</div>
+<!-- Hero Gallery -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-12">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(0)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A grand, ultra-modern penthouse living room in Lagos with floor-to-ceiling windows overlooking the Atlantic ocean at sunset. The interior features minimalist white marble floors, charcoal grey designer furniture, and warm ambient lighting. The atmosphere is quiet luxury and architectural perfection, captured with high-resolution clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsTQ9MPS6CWGAjlx2FC7ZteubXzXuzXMCqQhSYihGpCXXLLdsEJfKZMuPfsPAJf8OhOla-LvDmKxQ4iS6tZlL68083Yn1Vu9s4DfO6XL54761TVuqFnun7_OYIeRMsnRsttNUoZb79ovr5iu7M88gWwtduUd1Y1AtO0Fxx2B-YdV_sLH6ZW51NfWm_TgA7GPhtKkCw0M-gQwn0jFA-bFsSnhJ1ldnsZFNcmUhUNCDLQqMmzZ7BGPF4Ng"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(1)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated master bedroom with a king-sized bed, soft neutral tones, and a custom architectural headboard. Large windows reveal a city skyline view. The design follows a modern minimalist aesthetic with premium textures like silk and brushed velvet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBucKiFiiQfL_7OF0IGKIrgMUCemzKvezApz9U12IbbrhAwbOtbrFmHODEu3bcsgdyLpM9-nhJytgFfGXooXmzbLTbSHdGQDrz0HmhkqGdIsAi_r63NkzB1SeoUKxQ_rF7E40zISUXbtBe286wuVcllLHD459pj2MRBmHVP66wvacvxY_wTos7O_hS5n9rAEXkvUBi3hfi0ogMh5Kf3QocsS8IND922YYaHtTPk3cgST1gTzRiEKpgPYA"/>
+</div>
+<div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(2)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An Olympic-sized infinity pool on a private terrace, reflecting the clear blue sky. High-end outdoor furniture and lush tropical greenery surround the deck. The lighting is bright and airy, emphasizing the exclusivity of the Nigerian luxury real estate market." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxS9Pyv_a8DVKWnRCWuQ_d0SzUzPaAkee_4frHAQHA24iO99jihoxsqBvZ-A5nDxUfIj8sAdGDGKdYM0gCDpvRnprpprKtxNRTADavrjnVHR6lm_JTou0ppsOnK9J1ADQXRcWW3-QeSszZJCVl7gGxIG-UIQ663q4AtYYI-wwLw3aubQIU8u0fNE0vNtvZ1L5EwY9YIr5UP8Fg-Tq5x6wFVywl2_AJWRAVZfA4Oy70JJR-87-OTvOL-Q"/>
+</div>
+<div class="md:col-span-2 relative group overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(3)">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A state-of-the-art kitchen featuring matte black cabinetry, integrated premium appliances, and a massive white quartz island. The space is brightened by recessed lighting and natural sunlight, projecting a professional and high-contrast aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOGlSItDDdaRkDtf9QUI2nuyo2w5_8UgqEBy_4BbxhU-4idIvfv-CJlLY7V0G1_U_a8hWUxok3BFkk2eBFBd90wxQeoBmLpEXMxcz1KCkw_NWbkIs0ui3pScSxzPCleGEf_dANkwJcx7T2qo2mBPntopLsdL3aQMdSCA65B6_1pFMHPRmr0CI065spEyhzEi3PYkllqTI-leXxrWFD2JEr_VmdPj5YgakLIsLeW2viDocuyyJDLYZU9A"/>
+<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-md px-4 py-2 rounded-lg font-label-md flex items-center gap-2 text-primary shadow-lg">
+<span class="material-symbols-outlined">grid_view</span>
+                        Show all 24 photos
+                    </div>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Left Column: Details -->
+<div class="lg:col-span-2 space-y-12">
+<!-- Header -->
+<div class="border-b border-outline-variant/30 pb-8">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    Verified Listing
+                                </span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-label-md text-label-md">For Sale</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary">The Obsidian Penthouse</h1>
+<p class="flex items-center gap-1 text-on-surface-variant font-body-lg text-body-lg">
+<span class="material-symbols-outlined">location_on</span>
+                                42 Eko Atlantic Boulevard, Victoria Island, Lagos
+                            </p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">List Price</p>
+<p class="font-headline-lg text-headline-lg text-primary">₦2,450,000,000</p>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4 pt-8">
+<div class="flex flex-col items-center p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">bed</span>
+<span class="font-bold text-primary">5</span>
+<span class="text-on-surface-variant text-[12px] uppercase">Bedrooms</span>
+</div>
+<div class="flex flex-col items-center p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">bathtub</span>
+<span class="font-bold text-primary">6</span>
+<span class="text-on-surface-variant text-[12px] uppercase">Bathrooms</span>
+</div>
+<div class="flex flex-col items-center p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">garage</span>
+<span class="font-bold text-primary">4</span>
+<span class="text-on-surface-variant text-[12px] uppercase">Garage</span>
+</div>
+<div class="flex flex-col items-center p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">square_foot</span>
+<span class="font-bold text-primary">1,200</span>
+<span class="text-on-surface-variant text-[12px] uppercase">sqm Area</span>
+</div>
+<div class="flex flex-col items-center p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">event</span>
+<span class="font-bold text-primary">2023</span>
+<span class="text-on-surface-variant text-[12px] uppercase">Year Built</span>
+</div>
+</div>
+</div>
+<!-- Description -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Exceptional Architectural Achievement</h2>
+<div class="prose max-w-none text-on-surface-variant space-y-4 font-body-md text-body-md">
+<p>Welcome to The Obsidian Penthouse, a triumph of contemporary design and engineering. Occupying the entire top three floors of the prestigious Obsidian Tower, this residence offers unparalleled 360-degree views of the Atlantic Ocean and the Lagos city skyline.</p>
+<p>Designed by world-renowned architects, the interior showcases a seamless blend of Italian marble, smoked oak, and floor-to-ceiling structural glass. The triple-height living area creates a sense of scale rarely found in private residences, while the private elevator provides discreet access to all levels, including the rooftop sky lounge and infinity pool.</p>
+<button class="text-primary font-bold flex items-center gap-1 mt-4 hover:underline">Read more <span class="material-symbols-outlined">expand_more</span></button>
+</div>
+</section>
+<!-- Amenities -->
+<section class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/10">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Property Amenities</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-8 gap-x-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">pool</span>
+</div>
+<span class="font-label-md text-on-surface">Infinity Pool</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">fitness_center</span>
+</div>
+<span class="font-label-md text-on-surface">Private Gym</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">movie</span>
+</div>
+<span class="font-label-md text-on-surface">Private Cinema</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">smartphone</span>
+</div>
+<span class="font-label-md text-on-surface">Smart Home</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">local_parking</span>
+</div>
+<span class="font-label-md text-on-surface">Valet Parking</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<span class="font-label-md text-on-surface">24/7 Concierge</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">wine_bar</span>
+</div>
+<span class="font-label-md text-on-surface">Wine Cellar</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">wifi</span>
+</div>
+<span class="font-label-md text-on-surface">High-Speed Fiber</span>
+</div>
+</div>
+</section>
+<!-- Interactive Tools -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-primary text-on-primary p-8 rounded-2xl flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">360° Virtual Tour</h3>
+<p class="text-on-primary-container opacity-90 mb-6">Experience the penthouse from anywhere in the world with our immersive VR tour.</p>
+</div>
+<button class="bg-surface text-primary w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined">view_in_ar</span>
+                            Start Virtual Tour
+                        </button>
+</div>
+<div class="bg-surface-container-high p-8 rounded-2xl flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md mb-2 text-primary">Floor Plans</h3>
+<p class="text-on-surface-variant mb-6">Detailed architectural layouts for all three levels of the Obsidian Penthouse.</p>
+</div>
+<button class="border-2 border-primary text-primary w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">floor_lamp</span>
+                            View Floor Plans
+                        </button>
+</div>
+</section>
+<!-- Mortgage Calculator -->
+<section class="bg-surface-container-low p-8 rounded-2xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Mortgage Calculator</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Total Amount (₦)</label>
+<input class="w-full h-2 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-primary" max="5000000000" min="100000000" type="range" value="2450000000"/>
+<div class="flex justify-between mt-2 font-bold text-primary">
+<span>₦100M</span>
+<span>₦2.45B</span>
+<span>₦5B</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Down Payment (%)</label>
+<div class="flex gap-4">
+<button class="flex-1 py-2 rounded-lg bg-primary text-on-primary font-bold">20%</button>
+<button class="flex-1 py-2 rounded-lg bg-surface border border-outline-variant text-on-surface hover:border-primary transition-colors">30%</button>
+<button class="flex-1 py-2 rounded-lg bg-surface border border-outline-variant text-on-surface hover:border-primary transition-colors">50%</button>
+</div>
+</div>
+</div>
+<div class="bg-surface p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center justify-center">
+<p class="text-on-surface-variant font-label-md uppercase tracking-widest mb-2">Estimated Monthly Payment</p>
+<p class="font-display-lg text-[48px] text-primary font-extrabold">₦18.4M</p>
+<p class="text-on-surface-variant text-[12px] mt-4 text-center">Calculated based on 25 years at 11.5% interest rate. Terms apply.</p>
+</div>
+</div>
+</section>
+<!-- Map -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Location</h2>
+<div class="h-96 w-full rounded-2xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-location="Lagos, Nigeria" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv8aoj-ezLHP_NzP4GgBGub0F8K_g2mZj3H0Wod8OXDSsHFBCiwXlww5t-btIKnsd9CxdX-uPyufQd4ZTup6jSvO1d4FC1QleFdzPfeJsYV6VqOAT67qo1OL9u71x-MNWLdCZ-8WQWcaxpjsO3tRK_upyprFMojCqdYsjoykrWey0g_ha227EvabbPJCAAWxsMOF6TVQsPn1pCipTTghHUQgQHQe5ob6E9Odm7KIdinNdkM7WDitEUow"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-2xl animate-bounce">
+<span class="material-symbols-outlined text-on-primary">location_on</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-center text-on-surface-variant font-body-md">
+<p>Victoria Island, Eko Atlantic, Lagos, Nigeria</p>
+<a class="text-primary font-bold hover:underline" href="#">Open in Google Maps</a>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar -->
+<aside class="space-y-8">
+<!-- Agent Contact Card -->
+<div class="sticky top-28 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<img class="w-20 h-20 rounded-full object-cover" data-alt="A portrait of a professional Nigerian male real estate agent in a sharp tailored navy suit. He is smiling warmly against a blurred modern office background. The lighting is flattering and high-key, communicating trust and expertise in luxury properties." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGBeJfRyG98_WcBsZPRmCtTe4aEEKLkmQFw20mCzfcJPESaG-dYbBKEnjaZxoPlq1S8MAyhTbS3lleZHFO9KvMBjwAnWRrLdwuuhacBYH0fx9y82-YF_R2YcqI1OA9hCYE_oDiK21feVO9LhRCG30MdAqkb7bQF-lZqIKAeOcUQORtJPUuwC8IaJVB5R60vyw5V4uFbb3B0Q5YABWpuBjybVbyvUP4JsKw7xElqLfP_xi9y3qXkAUc6Q"/>
+<div>
+<h4 class="font-headline-md text-[20px] text-primary">Tunde Adeyemi</h4>
+<p class="text-on-surface-variant text-label-md">Global Luxury Advisor</p>
+<div class="flex items-center gap-1 text-secondary mt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-[14px]">4.9 (124 reviews)</span>
+</div>
+</div>
+</div>
+<form class="space-y-4">
+<div>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all" placeholder="Your Name" type="text"/>
+</div>
+<div>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all" placeholder="Your Email" type="email"/>
+</div>
+<div>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all" placeholder="I'm interested in the Obsidian Penthouse..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:bg-primary-container transition-all" type="submit">
+                            Schedule Viewing
+                        </button>
+<button class="w-full border-2 border-[#25D366] text-[#25D366] py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#25D366] hover:text-white transition-all" type="button">
+<span class="material-symbols-outlined">chat</span>
+                            WhatsApp Agent
+                        </button>
+</form>
+<div class="mt-8 pt-8 border-t border-outline-variant/30 flex justify-center gap-6">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-error hover:border-error transition-all">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">print</span>
+</button>
+</div>
+</div>
+<!-- Featured Badge -->
+<div class="bg-primary-container rounded-2xl p-8 text-on-primary-container">
+<span class="material-symbols-outlined text-[40px] mb-4">diamond</span>
+<h4 class="font-headline-md text-headline-md mb-2">Platinum Listing</h4>
+<p class="text-sm opacity-80 leading-relaxed">This property is part of our Platinum Collection, featuring the most exclusive architectural masterpieces in Africa.</p>
+</div>
+</aside>
+</div>
+<!-- Related Properties -->
+<section class="max-w-container-max mx-auto px-margin-desktop mt-section-gap">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Similar Listings</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Hand-picked properties that match this aesthetic.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all" href="#">View Collection <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Related Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-4 shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A modern luxury villa in Abuja with geometric architecture and a white stone facade. The property features manicured gardens and a sleek driveway. Golden hour lighting creates a warm and inviting atmosphere. Professional architectural photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBonQzD_qe7N-2o9sH7Cmc6V5ayhgZpQ6EyWWihKBspZXzsc9Dcl8O24nWvzBLbqN7v1Dk1llw2RaZagMdV1HscY_oIjO4aK1eMD1L44lobmXUkjEXb3cnQPjdkRd_0HiMuyzZpVZLcSkj_v0APBUAt8vHTpk6ENERpdrB8xG-lL-GvZlknVtIsoL8ngoHNfZfNeTXXeziP4-_YiA_y7P3rT05ufcDPC7TX7OE6gJwd21pjJQcbmINMkg"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-lg font-label-md">New</div>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md p-2 rounded-full text-primary hover:text-error transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+</div>
+<h3 class="font-headline-md text-[20px] text-primary group-hover:text-secondary transition-colors">The Marquee Villa</h3>
+<p class="text-on-surface-variant mb-4">Maitama, Abuja</p>
+<div class="flex justify-between items-center">
+<span class="font-bold text-primary">₦1,200,000,000</span>
+<div class="flex gap-3 text-on-surface-variant text-[14px]">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bed</span> 4</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">square_foot</span> 850m²</span>
+</div>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-4 shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An ultra-modern minimalist mansion in Banana Island, Lagos, featuring glass walls and cantilevered structures. The pool area is visible in the foreground with high-end lounge chairs. The image is captured in a high-contrast style with crisp lines and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0bqT75rVWWyiGd31_IN4wXWQ33Vrspl4wnMSCy4aZmo0NewO4ANOYYClqeTxbnV7reFTWAeS7tumiWNypoM6moVprRqRP2fZ3Hu5bjPJKuakZNfDNReEjjhw6vWxcWaeQ-5JV7A8ZTmWZ9787RFB-VO-8oAOOxJGG8EPqrg37JXRsHJXgWWXbt45OFFaekKYh7PTQ4AuVEQ3bHPP3OXIlO95I_xycz3LZoVzwr8RV33x5R2eqc9Wr0g"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md p-2 rounded-full text-primary hover:text-error transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+</div>
+<h3 class="font-headline-md text-[20px] text-primary group-hover:text-secondary transition-colors">Glass House Manor</h3>
+<p class="text-on-surface-variant mb-4">Banana Island, Lagos</p>
+<div class="flex justify-between items-center">
+<span class="font-bold text-primary">₦3,800,000,000</span>
+<div class="flex gap-3 text-on-surface-variant text-[14px]">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bed</span> 7</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">square_foot</span> 2,100m²</span>
+</div>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative h-64 rounded-2xl overflow-hidden mb-4 shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A premium luxury apartment complex in Ikoyi, Lagos. The building features bronze metal accents and expansive balconies with greenery. The lighting is sophisticated twilight, highlighting the architectural details and interior warm lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOYs4QZGp_om3_bMnWO7em2L-z0q4Cg3vCSqyHN1NNZUzvvfKhMa-kqCx8HekM3N4J7MUULg8zV16Avp9Axz-lz2ZJBbnXjjyyjDkZH2EnCsLF3cTzWE0ougbojfJTpOlh5H9tSsuyfO4CbTQC7Faah7XOv3ZNXIkWLUzUUj7X3C4PCFQqyKM640HEB7ftPM-d-nDSMrHCaFNxpEpyql-z7AfbkLvqKwEPDsyt8NNA_IaW0Nu_ikehCA"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md p-2 rounded-full text-primary hover:text-error transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+</div>
+<h3 class="font-headline-md text-[20px] text-primary group-hover:text-secondary transition-colors">Azure Sky Residence</h3>
+<p class="text-on-surface-variant mb-4">Old Ikoyi, Lagos</p>
+<div class="flex justify-between items-center">
+<span class="font-bold text-primary">₦950,000,000</span>
+<div class="flex gap-3 text-on-surface-variant text-[14px]">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">bed</span> 3</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">square_foot</span> 420m²</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-highest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-extrabold text-primary">LuxEstate</div>
+<p class="text-on-surface-variant font-body-md text-body-md">Defining Architectural Permanence in the Nigerian luxury market since 2012.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Company</h5>
+<ul class="space-y-4 text-on-surface-variant font-body-md text-body-md">
+<li><a class="hover:text-secondary-fixed transition-all" href="#">About Us</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Our Agents</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Luxury Insights</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Services</h5>
+<ul class="space-y-4 text-on-surface-variant font-body-md text-body-md">
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Property Valuation</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Asset Management</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Concierge Search</a></li>
+<li><a class="hover:text-secondary-fixed transition-all" href="#">Legal Advisory</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Newsletter</h5>
+<p class="text-on-surface-variant mb-6 font-body-md">Subscribe for early access to off-market listings.</p>
+<div class="flex flex-col gap-3">
+<input class="bg-surface border-none rounded-lg p-3 text-on-surface focus:ring-1 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary py-3 rounded-lg font-bold hover:bg-primary-container transition-all">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 text-center text-on-surface-variant font-label-md">
+            © 2024 LuxEstate. Defining Architectural Permanence.
+        </div>
+</footer>
+<!-- Lightbox Modal (Simplified Logic) -->
+<div class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center" id="lightbox">
+<button class="absolute top-8 right-8 text-white" onclick="closeLightbox()">
+<span class="material-symbols-outlined text-[48px]">close</span>
+</button>
+<div class="max-w-5xl w-full px-8">
+<img class="w-full max-h-[819px] object-contain rounded-xl" data-alt="Full size high resolution property photo from the gallery, showing detailed architectural materials and master craftsmanship." id="lightbox-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBA4qjyjoBLPUBLd86EBc5BBU4IwEEpyRO2wLvJ9gQgJXWDbxJsTaAUuRRck3kCQlwobEzxmDWmAEggZuStTrCBkjku2wMAb5w-J0-tsAxgsbPhsU6FpqhQNjnNTaLFpCNCmp4zXHP3C7uQBBB6eztD_gGpzx4YZhSAKb03Qofr49czhvUrm9511RQfJxcVZPz6sLWL8c8MillrR1buh8wzVsbAKEdtYbLwnL7kDgzibHwuudf5EgDUw"/>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<script>
+        function openLightbox(index) {
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.getElementById('lightbox').classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.getElementById('lightbox').classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Simple Mortgage Calculator logic
+        const rangeInput = document.querySelector('input[type="range"]');
+        const paymentDisplay = document.querySelector('.font-display-lg');
+
+        rangeInput.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value);
+            // Rough calculation: (Val * 0.8) / 300 months + some interest
+            const monthly = Math.round((val * 0.0075));
+            paymentDisplay.innerText = `₦${(monthly/1000000).toFixed(1)}M`;
+        });
+    </script>
+</body></html>
