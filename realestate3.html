@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuxEstate | Meet Our Experts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fcf9f8",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#745c00",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-surface": "#303030",
+                    "primary-container": "#081c3a",
+                    "primary-fixed-dim": "#b5c7ed",
+                    "on-tertiary-container": "#008dc9",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f0eded",
+                    "surface-container-high": "#eae7e7",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e5e2e1",
+                    "background": "#fcf9f8",
+                    "secondary-fixed": "#ffe088",
+                    "secondary": "#735c00",
+                    "on-background": "#1b1c1c",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#071b39",
+                    "outline-variant": "#c5c6ce",
+                    "primary": "#000208",
+                    "on-primary-container": "#7485a8",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-surface-variant": "#44474e",
+                    "secondary-container": "#fed65b",
+                    "primary-fixed": "#d7e2ff",
+                    "on-surface": "#1b1c1c",
+                    "surface-bright": "#fcf9f8",
+                    "surface-tint": "#4e5f80",
+                    "tertiary-container": "#001f30",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#dcd9d9",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#c9e6ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#b5c7ed",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#000205",
+                    "on-primary-fixed-variant": "#364767",
+                    "outline": "#75777e",
+                    "on-tertiary-fixed": "#001e2f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .agent-card-shadow {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      }
+      .agent-card-shadow:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline-variant/10 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-on-primary">LuxEstate</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Buy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Rent</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Sell</a>
+<a class="text-primary border-b-2 border-secondary-fixed font-bold pb-1 font-label-md text-label-md" href="#">Agents</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-on-surface-variant font-label-md text-label-md hover:text-secondary">Contact</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md transition-transform duration-300 hover:scale-105">List Property</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-margin-desktop max-w-container-max mx-auto pt-24 pb-12">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase tracking-widest">LuxEstate Partners</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-6">Meet Our Experts</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Guided by architectural permanence and a commitment to discretion, our advisors specialize in navigating the most exclusive real estate markets in Lagos and Abuja.
+                </p>
+</div>
+<!-- Atmospheric Gradient -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed/20 rounded-full blur-[100px] -z-10"></div>
+</section>
+<!-- Search & Filter Bar -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-16">
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-4 items-end">
+<div class="flex-1 w-full space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Search Agent</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 transition-all font-body-md text-body-md" placeholder="Name or expertise..." type="text"/>
+</div>
+</div>
+<div class="flex-1 w-full space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Market Location</label>
+<select class="w-full px-4 py-3 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 transition-all font-body-md text-body-md appearance-none">
+<option>All Territories</option>
+<option>Ikoyi, Lagos</option>
+<option>Victoria Island, Lagos</option>
+<option>Maitama, Abuja</option>
+<option>Asokoro, Abuja</option>
+</select>
+</div>
+<div class="flex-1 w-full space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Specialization</label>
+<select class="w-full px-4 py-3 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 transition-all font-body-md text-body-md appearance-none">
+<option>Global Luxury Advisor</option>
+<option>Commercial Portfolio Manager</option>
+<option>High-Yield Investment Specialist</option>
+<option>Waterfront Estate Expert</option>
+</select>
+</div>
+<button class="w-full md:w-auto px-10 py-3 bg-primary text-on-primary rounded-xl font-label-md text-label-md hover:scale-102 transition-transform h-[52px]">Apply Filter</button>
+</div>
+</section>
+<!-- Agents Grid -->
+<section class="px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Agent Card 1 -->
+<div class="group bg-white rounded-2xl overflow-hidden border border-outline-variant/20 agent-card-shadow transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A professional portrait of a distinguished African male real estate advisor in his 40s. He wears a tailored charcoal suit and stands against a blurred backdrop of a contemporary luxury office in Lagos. The lighting is sophisticated and directional, highlighting his confident expression. The overall style is clean, modern, and high-end, fitting a premium luxury real estate brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdY2PFK1j-tw-9Y38pn8HFjZQo8wMv9VQ0BRWerJQbGl0qqz__1mbFeUQyDb-hzodywOfpgJ-LeTp1jY72lWR2j-jhrz2vwXX1MhUwl5Ek9NA63M6t1g9OCRsRQ_B9QxHAPYb1wXUt7o5YXtPrLuKdVJQXjTBKBLWbcp_kBLLuL6x4Yxom1EhH5MS2lYx-_2okXqtR1J1t3RpVWDFNHCe0RkLLXB_wK1Uc0w3MBRnnV0RQ6qnkZ8tIiw"/>
+<div class="absolute top-4 right-4 px-3 py-1 bg-white/90 glass-effect rounded-full font-label-md text-label-md text-primary">Senior Partner</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Adebola Williams</h3>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Global Luxury Advisor</p>
+</div>
+</div>
+<div class="flex gap-6 mt-6 mb-8 border-y border-outline-variant/10 py-4">
+<div class="text-center">
+<span class="block font-headline-md text-headline-md text-primary">12+</span>
+<span class="block font-label-md text-label-md text-on-surface-variant">Years Exp.</span>
+</div>
+<div class="text-center border-l border-outline-variant/10 pl-6">
+<span class="block font-headline-md text-headline-md text-primary">240+</span>
+<span class="block font-label-md text-label-md text-on-surface-variant">Units Sold</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<a class="w-full py-3 bg-primary text-on-primary text-center rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity" href="#">View Listings</a>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-3 border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">mail</span> Email
+                                </button>
+<button class="flex items-center justify-center gap-2 py-3 border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span> WhatsApp
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Agent Card 2 -->
+<div class="group bg-white rounded-2xl overflow-hidden border border-outline-variant/20 agent-card-shadow transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A professional headshot of a sophisticated African female real estate expert in her early 30s. She is dressed in an elegant cream-colored power suit, standing in a brightly lit architectural space with marble finishes. The atmosphere is professional yet approachable. Her expression is welcoming and expert. The color palette is composed of neutrals and soft highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmq9OEFLwZg9fNYK0wTCr4JNBLf7n1opC-bw0ORACsHg9eCpEhH_1mIOUKHgZEjFqzYA06GvH6SLaU3Gb0mX28FgcodMduwjoRNBSu49RGVOxVW2hHR1ehe-R7Z-x2QOrTzJcw9HzKUNYxTJmAhtC_S7WhzN5ji4Afs6_gdCBrkLmxDIl4K_kTc1Gid4N57-1fAOFpnxhNHqDwVDTluui-l23KW_Rre-PNrKKK-n1vyrdopdStXVnHMQ"/>
+<div class="absolute top-4 right-4 px-3 py-1 bg-white/90 glass-effect rounded-full font-label-md text-label-md text-primary">Rising Star</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Zainab Aliyu</h3>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Investment Specialist</p>
+</div>
+</div>
+<div class="flex gap-6 mt-6 mb-8 border-y border-outline-variant/10 py-4">
+<div class="text-center">
+<span class="block font-headline-md text-headline-md text-primary">7+</span>
+<span class="block font-label-md text-label-md text-on-surface-variant">Years Exp.</span>
+</div>
+<div class="text-center border-l border-outline-variant/10 pl-6">
+<span class="block font-headline-md text-headline-md text-primary">85+</span>
+<span class="block font-label-md text-label-md text-on-surface-variant">Units Sold</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<a class="w-full py-3 bg-primary text-on-primary text-center rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity" href="#">View Listings</a>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-3 border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">mail</span> Email
+                                </button>
+<button class="flex items-center justify-center gap-2 py-3 border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span> WhatsApp
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Agent Card 3 -->
+<div class="group bg-white rounded-2xl overflow-hidden border border-outline-variant/20 agent-card-shadow transition-all duration-300">
+<div class="relative h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Portrait of a seasoned male real estate professional in his late 50s. He has a distinguished presence, wearing a premium navy blazer and a white shirt. He is standing on a high-rise balcony overlooking a metropolitan skyline at dusk with warm city lights flickering in the distance. The lighting is cinematic, highlighting his experienced features. The style is ultra-luxurious and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe_nP2gEHzZCqWjBBRlQoNTu7VuC3yTAbarYExBnF6U2I8MIdiucdVBiIo07ICFSLs-5RwFNvCySFDwAGChKU3lsOS7bjOBXl5QppOOPDsdhiKkVznNXGYNkpuKnxuxNYKwktJ7QGQ9GJcUdv0jQRPDeNvD3uokYVPzmDWz3VDbzJmBLUeDqCnTIDGFATtVdpwr_YRBMzEWIcOwvzEWOnmd8do-Oqzi0CNVJht9eNT5MAVC53eIsbOwA"/>
+<div class="absolute top-4 right-4 px-3 py-1 bg-white/90 glass-effect rounded-full font-label-md text-label-md text-primary">Managing Director</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Chief Emeka Okafor</h3>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-tight">Ultra-Prime Specialist</p>
+</div>
+</div>
+<div class="flex gap-6 mt-6 mb-8 border-y border-outline-variant/10 py-4">
+<div class="text-center">
+<span class="block font-headline-md text-headline-md text-primary">25+</span>
+<span class="block font-label-md text-label-md text-on-surface-variant">Years Exp.</span>
+</div>
+<div class="text-center border-l border-outline-variant/10 pl-6">
+<span class="block font-headline-md text-headline-md text-primary">500+</span>
+<span class="block font-label-md text-label-md text-on-surface-variant">Units Sold</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<a class="w-full py-3 bg-primary text-on-primary text-center rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity" href="#">View Listings</a>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-3 border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">mail</span> Email
+                                </button>
+<button class="flex items-center justify-center gap-2 py-3 border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span> WhatsApp
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="mt-section-gap bg-primary-container rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-6">Are You a Top-Tier Professional?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10 opacity-80">
+                        Join the most exclusive real estate network in the region. We are looking for experts who understand architectural permanence and quiet luxury.
+                    </p>
+<button class="px-10 py-4 bg-secondary-container text-on-secondary-container rounded-xl font-label-md text-label-md hover:scale-105 transition-transform">Apply to Join LuxEstate</button>
+</div>
+<!-- Background decorative elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-highest dark:bg-primary-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-extrabold text-primary dark:text-on-primary-container">LuxEstate</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant max-w-xs">
+                    Curating architectural masterpieces for the discerning investor.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-bold mb-6">Company</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant">
+<li><a class="hover:text-secondary-container transition-all" href="#">About Us</a></li>
+<li><a class="hover:text-secondary-container transition-all" href="#">Careers</a></li>
+<li><a class="hover:text-secondary-container transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-bold mb-6">Services</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant">
+<li><a class="hover:text-secondary-container transition-all" href="#">Property Search</a></li>
+<li><a class="hover:text-secondary-container transition-all" href="#">Agent Match</a></li>
+<li><a class="hover:text-secondary-container transition-all" href="#">Market Analysis</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-bold mb-6">Newsletter</h4>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant mb-4">Market insights delivered monthly.</p>
+<div class="flex gap-2">
+<input class="w-full px-4 py-2 bg-surface rounded-lg border border-outline-variant focus:outline-none text-body-md" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-lg material-symbols-outlined">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant opacity-80">© 2024 LuxEstate. Defining Architectural Permanence.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary-container transition-all" href="#"><i class="material-symbols-outlined">public</i></a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary-container transition-all" href="#"><i class="material-symbols-outlined">share</i></a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for filter inputs
+        document.querySelectorAll('input, select').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.parentElement.classList.add('scale-[1.01]');
+            });
+            element.addEventListener('blur', () => {
+                element.parentElement.classList.remove('scale-[1.01]');
+            });
+        });
+
+        // Simple scroll reveal for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.agent-card-shadow').forEach(card => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(20px)";
+            card.style.transition = "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+            observer.observe(card);
+        });
+    </script>
+</body></html>
